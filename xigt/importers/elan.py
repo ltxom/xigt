@@ -2,7 +2,15 @@ import pympi
 from lxml import etree
 from xigt.importers.pangloss import xigt_import as pangloss2xigt
 
+"""
+To achieve conversion from ELAN to Xigt, the importer uses the convenience of
+implemented Elan2Pangloss and Pangloss2Xigt programs.
 
+Elan2Pangloss:
+The algorithm of Elan2Pangloss program is retrieved from Pangloss' GitHub repository 
+(https://github.com/CNRS-LACITO/Pangloss_website/tree/master/tools/ELAN). It 
+was implemented by Nathaniel Sims under the MIT license.
+"""
 def xigt_import(inpath, outpath, options=None):
     filename = inpath
     eafob = pympi.Elan.Eaf(filename)

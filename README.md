@@ -86,6 +86,7 @@ The following extra features have their own requirements:
 * The ODIN importer: get [odin-utils](https://github.com/xigt/odin-utils)
 * The [incr tsdb()] profile exporter: get
   [pyDelphin](https://github.com/goodmami/pydelphin)
+* The Pangloss/ELAN importer: <code>xigt import -f {pangloss,elan} ...</code>
 
 For validating Xigt's XML format, I recommend
 [Jing](http://www.thaiopensource.com/relaxng/jing.html).
