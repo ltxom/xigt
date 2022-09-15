@@ -13,6 +13,10 @@ def run(args):
         import xigt.importers.toolbox as importer
     elif inp_format == 'odin':
         import xigt.importers.odin as importer
+    elif inp_format == 'pangloss':
+        import xigt.importers.pangloss as importer
+    elif inp_format == 'elan':
+        import xigt.importers.elan as importer
     # elif ...
     if config is not None:
         config = json.load(open(config, 'r'))
@@ -28,7 +32,7 @@ def main(arglist=None):
     parser.add_argument('-o', '--output', metavar='PATH', required=True,
         help='The output Xigt corpus file or directory.')
     parser.add_argument('-f', '--format', metavar='FMT',
-        choices=['toolbox', 'odin'], default='toolbox',
+        choices=['toolbox', 'odin', 'pangloss', 'elan'], default='toolbox',
         help='The format of the input corpus (default: toolbox).')
     parser.add_argument('-c', '--config', metavar='PATH',
         help='A JSON-formatted configuration file for '
